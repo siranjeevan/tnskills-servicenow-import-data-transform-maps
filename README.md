@@ -1,13 +1,58 @@
-Import Data using Transform Maps in ServiceNow Project Overview This project demonstrates how to successfully import external data from a spreadsheet into ServiceNow. It covers the end-to-end process of data ingestion, including creating target tables, configuring import sets, building transform maps, validating data to prevent duplicates, and visualizing the results through reports.
+# ServiceNow Data Import & Transformation using Transform Maps
 
-Files Included in this Repository Sample Spreadsheet (.xlsx / .csv): The raw data source containing the mock records used for the import process.
+## Project Overview
 
-ServiceNow Update Set (.xml): The exported configurations from my ServiceNow instance, which includes the custom tables, transform maps, and reports.
+This project demonstrates an end-to-end data migration workflow in ServiceNow, where structured data from an external spreadsheet is imported, transformed, validated, and stored in a ServiceNow target table.
 
-Project Milestones & Features Creation of Spreadsheet and Table: Created the initial raw data and configured the target destination table within ServiceNow.
+The project focuses on automating data ingestion using Import Sets and Transform Maps while maintaining data accuracy and avoiding duplicate records through Coalesce configuration. The imported information is then analyzed and presented using ServiceNow Reports and Dashboards.
 
-Creation of Import Set Table and Transform Map: Configured the staging table (Import Set) and mapped the spreadsheet columns to the correct target table fields.
+## Repository Contents
 
-Transform Data, Validate, and Enable Coalesce: Executed the data transformation, validated the imported records, and configured Coalesce fields to ensure existing records update instead of creating duplicates.
+### 📊 Sample Data Spreadsheet
+Contains the source dataset used for the project. The spreadsheet includes sample employee information such as Employee ID, Name, Email, Department, and Location.
 
-Creation of Reports & Dashboards: Built ServiceNow reports to visualize the successfully imported data and organized them into a dashboard.
+### ⚙️ ServiceNow Update Set
+Contains the exported ServiceNow configurations created during the project, including:
+
+- Custom target tables
+- Import Set configurations
+- Transform Maps
+- Field mappings
+- Coalesce configuration
+- Reports
+- Dashboard components
+
+## Project Implementation
+
+### 1. Source Data & Target Table Setup
+Created a structured spreadsheet containing sample employee records and designed the corresponding target table in ServiceNow to store the imported information.
+
+### 2. Import Set & Transform Map Configuration
+Configured an Import Set Table to act as a staging area for the external spreadsheet data. A Transform Map was then created to establish relationships between source columns and ServiceNow target fields.
+
+### 3. Data Transformation & Validation
+Executed the transformation process and verified that the imported records were correctly mapped and stored in the target table. Data validation was performed to ensure consistency and accuracy throughout the migration process.
+
+### 4. Duplicate Prevention with Coalesce
+Configured Coalesce on the appropriate field to uniquely identify existing records. This ensures that matching records are updated instead of creating unnecessary duplicate entries during subsequent imports.
+
+### 5. Reports & Dashboard
+Created ServiceNow Reports to analyze and present the imported data. The reports were organized into a dashboard to provide a centralized and easy-to-understand view of the resulting records.
+
+## Key ServiceNow Concepts Demonstrated
+
+- Import Sets
+- Import Set Tables
+- Transform Maps
+- Field Mapping
+- Data Transformation
+- Coalesce
+- Data Validation
+- Custom Tables
+- ServiceNow Reports
+- ServiceNow Dashboards
+- Update Sets
+
+## Project Outcome
+
+The completed workflow provides a reusable approach for importing spreadsheet-based data into ServiceNow. It demonstrates how external data can be systematically processed, transformed, validated, and visualized while maintaining data integrity and minimizing duplicate records.
